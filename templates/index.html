@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my website</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Complete the Registration Form</h1>
+    <form method="POST" action="{% url 'registration' %}" id="one" >
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td class="words">Enter your name : </td>
+                <td><input type="text" name="firstname"></td>
+            </tr>
+            <br>
+            <tr>
+                <td class="words">Enter your email : </td>
+                <td><input type="email" name="emailid"></td>
+            </tr>
+            <br>
+            <tr>
+                <td class="words">Enter your address : </td>
+                <td><input type="text" name="addresss"></td>
+            </tr>
+            <br>
+            <tr>
+                <td class="words">Enter your phone no : </td>
+                <td><input type="number" name="phonenumber"></td>
+            </tr>
+            <br>
+            <tr>
+                <td></td>
+                <td><input type="submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
